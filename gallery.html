@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background-color: #fff;
+    }
+    footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    }
+    header {
+        background-image:url(Rectangle\ 1.png);
+        background-size:cover;
+        background-repeat:no-repeat;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        color: white;
+        position:sticky;
+        top: 0;
+        z-index: 100;
+    }
+    header h1 {
+        font-size: 2.2rem;
+        margin: 0;
+        font-weight: 500;
+    }
+    nav {
+        display:flex;
+        gap: 100px;
+    }
+    nav a{
+        color:aliceblue;
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #ccc;
+    }
+    main {
+      padding: 40px 80px;
+      text-align: center;
+    }
+
+    .switch-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .switch-buttons button {
+      width: 80px;
+      height: 50px;
+      background-color: #ccc;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .switch-buttons button.active {
+      background-color: #555;
+      color: #fff;
+    }
+
+    .switch-buttons button:hover {
+      background-color: #888;
+      color: white;
+    }
+    .gallery {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 220px;
+      height: 260px;
+      object-fit: cover;
+      background-color: #ddd;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .on{display:grid;}
+</style>
+<body>
+    <header>
+        <h1>meenoi</h1>
+        <nav>
+            <a href="index.html">Artist</a>
+            <a href="album.html">Album</a>
+            <a href="helper.html">Helper</a>
+            <a href="broadcasting.html">Broadcasting</a>
+            <a href="goods.html">Goods</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+<main>
+    <div class="switch-buttons">
+      <button id="artistBtn" class="active">Artist</button>
+      <button id="petBtn">Pet</button>
+    </div>
+    <div class="gallery gallery1" id="gallery">
+      <img src="미노이a.webp" alt="artist image">
+      <img src="미노이b.webp" alt="artist image">
+      <img src="미노이c.webp" alt="artist image">
+      <img src="미노이d.webp" alt="artist image">
+      <img src="미노이e.webp" alt="artist image">
+      <img src="미노이f.webp" alt="artist image">
+      <img src="미노이g.jpeg" alt="artist image">
+      <img src="미노이h.jpg" alt="artist image">
+      <img src="미노이i.jpg" alt="artist image">
+      <img src="미노이j.jpg" alt="artist image">
+    </div>
+        <div class="gallery gallery2" id="gallery">
+      <img src="cat1.jpg" alt="artist image">
+      <img src="cat2.jpg" alt="artist image">
+      <img src="cat3.jpg" alt="artist image">
+      <img src="cat4.jpeg" alt="artist image">
+      <img src="cat5.webp" alt="artist image">
+      <img src="cat6.jpeg" alt="artist image">
+      <img src="cat7.jpeg" alt="artist image">
+      <img src="cat8.jpg" alt="artist image">
+      <img src="cat10.jpg" alt="artist image">
+      <img src="cat11.jpg" alt="artist image">
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 meenoi. All rights reserved.</p>
+  </footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+     $(document).ready(function(){
+        $('.gallery1').addClass('on')
+      $("#petBtn").click(function(){
+
+        
+        $('.gallery1').removeClass('on');
+        $('.gallery2').addClass('on')
+        $('#petBtn').addClass('active')
+        $('#artistBtn').removeClass('active')
+        
+      })
+      $("#artistBtn").click(function(){
+        $('.gallery2').removeClass('on');
+        $('.gallery1').addClass('on')
+        $('#petBtn').removeClass('active')
+        $('#artistBtn').addClass('active')
+      })
+    });
+
+  </script>
+</body>
+</html>

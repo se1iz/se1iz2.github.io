@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #fff;
+    }
+    footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    }
+    header {
+        background-image:url(Rectangle\ 1.png);
+        background-size:cover;
+        background-repeat:no-repeat;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        color: white;
+        position:sticky;
+        top: 0;
+        z-index: 100;
+    }
+    header h1 {
+        font-size: 2.2rem;
+        margin: 0;
+        font-weight: 500;
+    }
+        nav {
+        display:flex;
+        gap: 100px;
+    }
+    nav a{
+        color:aliceblue;
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #ccc;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 60px;
+      padding: 100px 60px;
+    }
+    .left-image img {
+      width: 400px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    }
+    .right-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      flex: 1;
+    }
+    .text-box {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      height: 220px;
+    }
+    .text-box h2 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+    .text-box p {
+      font-size: 1.1rem;
+      line-height: 1.8rem;
+      white-space: pre-line;
+    }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .video-grid video {
+      width: 100%;
+      height: 250px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 100px;
+    }
+</style>
+<body>
+    <header>
+        <h1>meenoi</h1>
+        <nav>
+            <a href="index.html">Artist</a>
+            <a href="album.html">Album</a>
+            <a href="helper.html">Helper</a>
+            <a href="broadcasting.html">Broadcasting</a>
+            <a href="goods.html">Goods</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+  <main>
+    <div class="left-image">
+      <img src="요리조리.webp">
+    </div>
+    <div class="right-content">
+      <div class="text-box">
+        <h2>미노이의 요리조리</h2>
+        <p>
+          미노이가 직접 요리를 하며 손님들과 대화를 나누는 따뜻한 토크 예능.
+          음악, 일상, 사람 이야기를 함께 나누는 소박하고 진솔한 방송dl다.
+        </p>
+        <p><strong>방송 플랫폼:</strong> AOMG 유튜브 채널<br>
+      </div>
+      <div class="video-grid">
+        <video controls>
+            <source src="meenoi1.mp4" type="video/mp4">
+        </video>
+        <video controls>
+            <source src="meenoi2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </main>
+    <footer>
+        <p>© 2025 meenoi. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background-color: #fff;
+    }
+    footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    }
+    header {
+        background-image:url(Rectangle\ 1.png);
+        background-size:cover;
+        background-repeat:no-repeat;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        color: white;
+        position:sticky;
+        top: 0;
+        z-index: 100;
+    }
+    header h1 {
+        font-size: 2.2rem;
+        margin: 0;
+        font-weight: 500;
+    }
+    nav {
+        display:flex;
+        gap: 100px;
+    }
+    nav a{
+        color:aliceblue;
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #ccc;
+    }
+    main {
+      position: relative;
+      width: 100%;
+      min-height: 1600px;
+      overflow-x: hidden;
+    }
+    .hero {
+      width: 100%;
+      height: 500px;
+      background: url("Mask group.png") center/cover no-repeat;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 100%);
+    }
+    .goods-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 100px 80px;
+      width: 100%;
+      max-width: 1200px;
+      justify-items: center;
+    }
+    .item {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .item img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+.item-text {
+  width: 200px;
+  height: 60px;
+  border: 0px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0);
+}
+.item.right {
+  flex-direction: row;
+}
+.item.left {
+  flex-direction: row-reverse;
+}
+</style>
+<body>
+    <header>
+        <h1>meenoi</h1>
+        <nav>
+            <a href="index.html">Artist</a>
+            <a href="album.html">Album</a>
+            <a href="helper.html">Helper</a>
+            <a href="broadcasting.html">Broadcasting</a>
+            <a href="goods.html">Goods</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+<div class="hero"></div>
+<main>
+  <div class="item right" style="top: 50px; left: 150px;">
+    <img src="선글라스.webp">
+    <div class="item-text">meenoi 선글라스</div>
+  </div>
+  <div class="item left" style="top: 600px; left: 850px;">
+    <img src="키링1.webp">
+    <div class="item-text">meenoi 키링</div>
+  </div>
+  <div class="item right" style="top: 1000px; left: 400px;">
+    <img src="키링2.jpeg">
+    <div class="item-text">meenoi 렌티큘러 키링</div>
+  </div>
+  </main>
+  <footer>
+    <p>© 2025 meenoi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
